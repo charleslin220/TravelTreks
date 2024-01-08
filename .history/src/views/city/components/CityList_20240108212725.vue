@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-// import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue';
 import BScroll from '@better-scroll/core'
 
 interface cityItem {
@@ -42,29 +42,43 @@ interface cityItem {
 export default {
   name: 'CityList',
   props: {
-    hotCities: {
-      type: Array as PropType<cityItem[]>,
-      default: () => [] // Correct way to provide a default value
-    },
+    hotCities: Array as PropType<cityItem[]>,
+    default: () => [], // Provide a default empty array
     cities: Object
   },
-  data() {
-    return {
-      scroll: null // Define scroll here
-    };
-  },
-  mounted() {
-    this.$nextTick(() => {
-      if (this.$refs.wrapper) {
-        this.scroll = new BScroll(this.$refs.wrapper); // Correctly access the ref and initialize BetterScroll
+  setup() {
+    const wrapper = ref<HTMLElement | null>(null);
+    let scrollInstance = null;
+
+    onMounted(async () => {
+      await nextTick();  // Wait for the DOM to be updated
+      if (wrapper.value) {
+        scrollInstance = new BScroll(wrapper.value, {
+          // Additional options for BetterScroll can be added here
+        });
       }
     });
-  },
-  updated() {
-    if (this.scroll) {
-      this.scroll.refresh(); // Refresh BetterScroll on update
-    }
+
+    // Method to refresh BetterScroll, call this method after updating your data
+    const refreshScroll = () => {
+      if (scrollInstance) {
+        scrollInstance.refresh();
+      }
+    };
+
+    return { wrapper, refreshScroll };
   }
+//   setup() {
+//     const wrapper = ref<HTMLElement | null>(null)
+
+//     onMounted(() => {
+//       if (wrapper.value) {
+//         new BScroll(wrapper.value)
+//       }
+//     })
+
+//     return { wrapper }
+//   }
 }
 </script>
 <!--

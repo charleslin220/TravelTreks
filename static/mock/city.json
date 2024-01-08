@@ -1,0 +1,794 @@
+{
+    "ret": true,
+    "data": {
+        "hotCities": [
+            {
+                "id": 143,
+                "spell": "aberdeen",
+                "name": "Aberdeen"
+            },
+            {
+                "id": 152,
+                "spell": "birmingham",
+                "name": "Birmingham"
+            },
+            {
+                "id": 161,
+                "spell": "cambridge",
+                "name": "Cambridge"
+            },
+            {
+                "id": 173,
+                "spell": "derby",
+                "name": "Derby"
+            },
+            {
+                "id": 179,
+                "spell": "edinburgh",
+                "name": "Edinburgh"
+            },
+            {
+                "id": 184,
+                "spell": "glasgow",
+                "name": "Glasgow"
+            },
+            {
+                "id": 189,
+                "spell": "hamilton",
+                "name": "Hamilton"
+            }
+        ],
+        "cities": {
+            "A": [
+                {
+                    "id": 1,
+                    "spell": "aberdeen",
+                    "name": "Aberdeen"
+                },
+                {
+                    "id": 2,
+                    "spell": "armagh",
+                    "name": "Armagh"
+                },
+                {
+                    "id": 3,
+                    "spell": "andover",
+                    "name": "Andover"
+                },
+                {
+                    "id": 4,
+                    "spell": "ashford",
+                    "name": "Ashford"
+                },
+                {
+                    "id": 5,
+                    "spell": "aylesbury",
+                    "name": "Aylesbury"
+                },
+                {
+                    "id": 6,
+                    "spell": "ayr",
+                    "name": "Ayr"
+                }
+            ],
+            "B": [
+                {
+                    "id": 7,
+                    "spell": "bangor",
+                    "name": "Bangor"
+                },
+                {
+                    "id": 8,
+                    "spell": "bath",
+                    "name": "Bath"
+                },
+                {
+                    "id": 9,
+                    "spell": "belfast",
+                    "name": "Belfast"
+                },
+                {
+                    "id": 10,
+                    "spell": "birmingham",
+                    "name": "Birmingham"
+                },
+                {
+                    "id": 11,
+                    "spell": "blackburn",
+                    "name": "Blackburn"
+                },
+                {
+                    "id": 12,
+                    "spell": "blackpool",
+                    "name": "Blackpool"
+                },
+                {
+                    "id": 13,
+                    "spell": "bolton",
+                    "name": "Bolton"
+                },
+                {
+                    "id": 14,
+                    "spell": "bournemouth",
+                    "name": "Bournemouth"
+                },
+                {
+                    "id": 15,
+                    "spell": "bradford",
+                    "name": "Bradford"
+                },
+                {
+                    "id": 16,
+                    "spell": "brighton",
+                    "name": "Brighton"
+                },
+                {
+                    "id": 17,
+                    "spell": "bristol",
+                    "name": "Bristol"
+                },
+                {
+                    "id": 18,
+                    "spell": "bury",
+                    "name": "Bury"
+                },
+                {
+                    "id": 113,
+                    "spell": "bridgwater",
+                    "name": "Bridgwater"
+                },
+                {
+                    "id": 130,
+                    "spell": "bromyard",
+                    "name": "Bromyard"
+                },
+                {
+                    "id": 142,
+                    "spell": "bridgnorth",
+                    "name": "Bridgnorth"
+                }
+            ],
+            "C": [
+                {
+                    "id": 19,
+                    "spell": "cambridge",
+                    "name": "Cambridge"
+                },
+                {
+                    "id": 20,
+                    "spell": "canterbury",
+                    "name": "Canterbury"
+                },
+                {
+                    "id": 21,
+                    "spell": "cardiff",
+                    "name": "Cardiff"
+                },
+                {
+                    "id": 22,
+                    "spell": "carlisle",
+                    "name": "Carlisle"
+                },
+                {
+                    "id": 23,
+                    "spell": "chelmsford",
+                    "name": "Chelmsford"
+                },
+                {
+                    "id": 24,
+                    "spell": "cheltenham",
+                    "name": "Cheltenham"
+                },
+                {
+                    "id": 25,
+                    "spell": "chester",
+                    "name": "Chester"
+                },
+                {
+                    "id": 26,
+                    "spell": "colchester",
+                    "name": "Colchester"
+                },
+                {
+                    "id": 27,
+                    "spell": "coventry",
+                    "name": "Coventry"
+                },
+                {
+                    "id": 28,
+                    "spell": "crawley",
+                    "name": "Crawley"
+                },
+                {
+                    "id": 29,
+                    "spell": "croydon",
+                    "name": "Croydon"
+                },
+                {
+                    "id": 106,
+                    "spell": "chippenham",
+                    "name": "Chippenham"
+                },
+                {
+                    "id": 110,
+                    "spell": "calne",
+                    "name": "Calne"
+                },
+                {
+                    "id": 112,
+                    "spell": "corsham",
+                    "name": "Corsham"
+                },
+                {
+                    "id": 115,
+                    "spell": "clevedon",
+                    "name": "Clevedon"
+                },
+                {
+                    "id": 120,
+                    "spell": "cirencester",
+                    "name": "Cirencester"
+                },
+                {
+                    "id": 121,
+                    "spell": "cheltenham",
+                    "name": "Cheltenham"
+                }
+            ],
+            "D": [
+                {
+                    "id": 30,
+                    "spell": "darlington",
+                    "name": "Darlington"
+                },
+                {
+                    "id": 31,
+                    "spell": "derby",
+                    "name": "Derby"
+                },
+                {
+                    "id": 32,
+                    "spell": "doncaster",
+                    "name": "Doncaster"
+                },
+                {
+                    "id": 33,
+                    "spell": "dover",
+                    "name": "Dover"
+                },
+                {
+                    "id": 34,
+                    "spell": "dudley",
+                    "name": "Dudley"
+                },
+                {
+                    "id": 35,
+                    "spell": "dundee",
+                    "name": "Dundee"
+                },
+                {
+                    "id": 36,
+                    "spell": "durham",
+                    "name": "Durham"
+                },
+                {
+                    "id": 109,
+                    "spell": "devizes",
+                    "name": "Devizes"
+                },
+                {
+                    "id": 124,
+                    "spell": "dursley",
+                    "name": "Dursley"
+                }
+            ],
+            "E": [
+                {
+                    "id": 37,
+                    "spell": "edinburgh",
+                    "name": "Edinburgh"
+                },
+                {
+                    "id": 38,
+                    "spell": "ely",
+                    "name": "Ely"
+                },
+                {
+                    "id": 39,
+                    "spell": "exeter",
+                    "name": "Exeter"
+                }
+            ],
+            "F": [
+                {
+                    "id": 40,
+                    "spell": "falmouth",
+                    "name": "Falmouth"
+                },
+                {
+                    "id": 104,
+                    "spell": "frome",
+                    "name": "Frome"
+                }
+            ],
+            "G": [
+                {
+                    "id": 41,
+                    "spell": "gateshead",
+                    "name": "Gateshead"
+                },
+                {
+                    "id": 42,
+                    "spell": "glasgow",
+                    "name": "Glasgow"
+                },
+                {
+                    "id": 43,
+                    "spell": "gloucester",
+                    "name": "Gloucester"
+                },
+                {
+                    "id": 44,
+                    "spell": "grimsby",
+                    "name": "Grimsby"
+                },
+                {
+                    "id": 45,
+                    "spell": "guildford",
+                    "name": "Guildford"
+                },
+                {
+                    "id": 103,
+                    "spell": "glastonbury",
+                    "name": "Glastonbury"
+                },
+                {
+                    "id": 122,
+                    "spell": "gloucester",
+                    "name": "Gloucester"
+                }
+            ],
+            "H": [
+                {
+                    "id": 46,
+                    "spell": "halifax",
+                    "name": "Halifax"
+                },
+                {
+                    "id": 47,
+                    "spell": "hamilton",
+                    "name": "Hamilton"
+                },
+                {
+                    "id": 48,
+                    "spell": "harrow",
+                    "name": "Harrow"
+                },
+                {
+                    "id": 49,
+                    "spell": "hartlepool",
+                    "name": "Hartlepool"
+                },
+                {
+                    "id": 50,
+                    "spell": "hereford",
+                    "name": "Hereford"
+                },
+                {
+                    "id": 51,
+                    "spell": "huddersfield",
+                    "name": "Huddersfield"
+                },
+                {
+                    "id": 52,
+                    "spell": "hull",
+                    "name": "Hull"
+                },
+                {
+                    "id": 132,
+                    "spell": "hereford",
+                    "name": "Hereford"
+                }
+            ],
+            "I": [
+                {
+                    "id": 53,
+                    "spell": "inverness",
+                    "name": "Inverness"
+                },
+                {
+                    "id": 54,
+                    "spell": "ipswich",
+                    "name": "Ipswich"
+                }
+            ],
+            "K": [
+                {
+                    "id": 55,
+                    "spell": "kendal",
+                    "name": "Kendal"
+                },
+                {
+                    "id": 56,
+                    "spell": "kingstonuponhull",
+                    "name": "Kingston upon Hull"
+                },
+                {
+                    "id": 131,
+                    "spell": "kington",
+                    "name": "Kington"
+                }
+            ],
+            "L": [
+                {
+                    "id": 57,
+                    "spell": "lancaster",
+                    "name": "Lancaster"
+                },
+                {
+                    "id": 58,
+                    "spell": "leeds",
+                    "name": "Leeds"
+                },
+                {
+                    "id": 59,
+                    "spell": "leicester",
+                    "name": "Leicester"
+                },
+                {
+                    "id": 60,
+                    "spell": "lincoln",
+                    "name": "Lincoln"
+                },
+                {
+                    "id": 61,
+                    "spell": "liverpool",
+                    "name": "Liverpool"
+                },
+                {
+                    "id": 62,
+                    "spell": "llandudno",
+                    "name": "Llandudno"
+                },
+                {
+                    "id": 63,
+                    "spell": "london",
+                    "name": "London"
+                },
+                {
+                    "id": 64,
+                    "spell": "loughborough",
+                    "name": "Loughborough"
+                },
+                {
+                    "id": 65,
+                    "spell": "luton",
+                    "name": "Luton"
+                },
+                {
+                    "id": 128,
+                    "spell": "leominster",
+                    "name": "Leominster"
+                },
+                {
+                    "id": 129,
+                    "spell": "ledbury",
+                    "name": "Ledbury"
+                },
+                {
+                    "id": 133,
+                    "spell": "ludlow",
+                    "name": "Ludlow"
+                }
+            ],
+            "M": [
+                {
+                    "id": 66,
+                    "spell": "manchester",
+                    "name": "Manchester"
+                },
+                {
+                    "id": 67,
+                    "spell": "middlesbrough",
+                    "name": "Middlesbrough"
+                },
+                {
+                    "id": 68,
+                    "spell": "miltonkeynes",
+                    "name": "Milton Keynes"
+                },
+                {
+                    "id": 108,
+                    "spell": "marlborough",
+                    "name": "Marlborough"
+                },
+                {
+                    "id": 111,
+                    "spell": "melksham",
+                    "name": "Melksham"
+                },
+                {
+                    "id": 137,
+                    "spell": "marketdrayton",
+                    "name": "Market Drayton"
+                },
+                {
+                    "id": 141,
+                    "spell": "madeley",
+                    "name": "Madeley"
+                }
+            ],
+            "N": [
+                {
+                    "id": 69,
+                    "spell": "newcastle",
+                    "name": "Newcastle"
+                },
+                {
+                    "id": 70,
+                    "spell": "newport",
+                    "name": "Newport"
+                },
+                {
+                    "id": 71,
+                    "spell": "northampton",
+                    "name": "Northampton"
+                },
+                {
+                    "id": 72,
+                    "spell": "norwich",
+                    "name": "Norwich"
+                },
+                {
+                    "id": 73,
+                    "spell": "nottingham",
+                    "name": "Nottingham"
+                },
+                {
+                    "id": 125,
+                    "spell": "nailsworth",
+                    "name": "Nailsworth"
+                },
+                {
+                    "id": 138,
+                    "spell": "newport",
+                    "name": "Newport"
+                }
+            ],
+            "O": [
+                {
+                    "id": 74,
+                    "spell": "oxford",
+                    "name": "Oxford"
+                },
+                {
+                    "id": 135,
+                    "spell": "oswestry",
+                    "name": "Oswestry"
+                }
+            ],
+            "P": [
+                {
+                    "id": 75,
+                    "spell": "paisley",
+                    "name": "Paisley"
+                },
+                {
+                    "id": 76,
+                    "spell": "perth",
+                    "name": "Perth"
+                },
+                {
+                    "id": 77,
+                    "spell": "peterborough",
+                    "name": "Peterborough"
+                },
+                {
+                    "id": 78,
+                    "spell": "plymouth",
+                    "name": "Plymouth"
+                },
+                {
+                    "id": 79,
+                    "spell": "portsmouth",
+                    "name": "Portsmouth"
+                },
+                {
+                    "id": 80,
+                    "spell": "preston",
+                    "name": "Preston"
+                },
+                {
+                    "id": 116,
+                    "spell": "portishead",
+                    "name": "Portishead"
+                },
+                {
+                    "id": 126,
+                    "spell": "painswick",
+                    "name": "Painswick"
+                }
+            ],
+            "R": [
+                {
+                    "id": 81,
+                    "spell": "reading",
+                    "name": "Reading"
+                },
+                {
+                    "id": 82,
+                    "spell": "ripon",
+                    "name": "Ripon"
+                },
+                {
+                    "id": 127,
+                    "spell": "ross-on-wye",
+                    "name": "Ross-on-Wye"
+                }
+            ],
+            "S": [
+                {
+                    "id": 83,
+                    "spell": "salford",
+                    "name": "Salford"
+                },
+                {
+                    "id": 84,
+                    "spell": "salisbury",
+                    "name": "Salisbury"
+                },
+                {
+                    "id": 85,
+                    "spell": "sheffield",
+                    "name": "Sheffield"
+                },
+                {
+                    "id": 86,
+                    "spell": "southampton",
+                    "name": "Southampton"
+                },
+                {
+                    "id": 87,
+                    "spell": "stalbans",
+                    "name": "St Albans"
+                },
+                {
+                    "id": 88,
+                    "spell": "stirling",
+                    "name": "Stirling"
+                },
+                {
+                    "id": 89,
+                    "spell": "stoke-on-trent",
+                    "name": "Stoke-on-Trent"
+                },
+                {
+                    "id": 90,
+                    "spell": "sunderland",
+                    "name": "Sunderland"
+                },
+                {
+                    "id": 91,
+                    "spell": "swansea",
+                    "name": "Swansea"
+                },
+                {
+                    "id": 92,
+                    "spell": "swindon",
+                    "name": "Swindon"
+                },
+                {
+                    "id": 107,
+                    "spell": "swindon",
+                    "name": "Swindon"
+                },
+                {
+                    "id": 119,
+                    "spell": "stroud",
+                    "name": "Stroud"
+                },
+                {
+                    "id": 134,
+                    "spell": "shrewsbury",
+                    "name": "Shrewsbury"
+                }
+            ],
+            "T": [
+                {
+                    "id": 93,
+                    "spell": "truro",
+                    "name": "Truro"
+                },
+                {
+                    "id": 105,
+                    "spell": "trowbridge",
+                    "name": "Trowbridge"
+                },
+                {
+                    "id": 117,
+                    "spell": "thornbury",
+                    "name": "Thornbury"
+                },
+                {
+                    "id": 123,
+                    "spell": "tetbury",
+                    "name": "Tetbury"
+                },
+                {
+                    "id": 139,
+                    "spell": "telford",
+                    "name": "Telford"
+                }
+            ],
+            "W": [
+                {
+                    "id": 94,
+                    "spell": "wakefield",
+                    "name": "Wakefield"
+                },
+                {
+                    "id": 95,
+                    "spell": "walsall",
+                    "name": "Walsall"
+                },
+                {
+                    "id": 96,
+                    "spell": "watford",
+                    "name": "Watford"
+                },
+                {
+                    "id": 97,
+                    "spell": "wells",
+                    "name": "Wells"
+                },
+                {
+                    "id": 98,
+                    "spell": "westminster",
+                    "name": "Westminster"
+                },
+                {
+                    "id": 99,
+                    "spell": "winchester",
+                    "name": "Winchester"
+                },
+                {
+                    "id": 100,
+                    "spell": "wolverhampton",
+                    "name": "Wolverhampton"
+                },
+                {
+                    "id": 101,
+                    "spell": "worcester",
+                    "name": "Worcester"
+                },
+                {
+                    "id": 114,
+                    "spell": "weston-super-mare",
+                    "name": "Weston-super-Mare"
+                },
+                {
+                    "id": 136,
+                    "spell": "whitchurch",
+                    "name": "Whitchurch"
+                },
+                {
+                    "id": 140,
+                    "spell": "wellington",
+                    "name": "Wellington"
+                }
+            ],
+            "Y": [
+                {
+                    "id": 102,
+                    "spell": "york",
+                    "name": "York"
+                },
+                {
+                    "id": 118,
+                    "spell": "yate",
+                    "name": "Yate"
+                }
+            ]
+        }
+    }
+}

@@ -9,14 +9,14 @@
           </div>
         </div>
       </div>
-      <div class="area">
+      <!-- <div class="area">
         <div class="title border-topbottom">Popular Cities</div>
         <div class="button-list">
           <div class="button-wrapper" v-for="item of hotCities" :key="item.id">
             <div class="button">{{ item.name }}</div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="area" v-for="(item, key) of cities" :key="key">
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-// import { ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import BScroll from '@better-scroll/core'
 
 interface cityItem {
@@ -42,28 +42,20 @@ interface cityItem {
 export default {
   name: 'CityList',
   props: {
-    hotCities: {
-      type: Array as PropType<cityItem[]>,
-      default: () => [] // Correct way to provide a default value
-    },
+    hotCities: Array as PropType<cityItem[]>,
+    default: () => [], // Provide a default empty array
     cities: Object
   },
-  data() {
-    return {
-      scroll: null // Define scroll here
-    };
-  },
-  mounted() {
-    this.$nextTick(() => {
-      if (this.$refs.wrapper) {
-        this.scroll = new BScroll(this.$refs.wrapper); // Correctly access the ref and initialize BetterScroll
+  setup() {
+    const wrapper = ref<HTMLElement | null>(null)
+
+    onMounted(() => {
+      if (wrapper.value) {
+        new BScroll(wrapper.value)
       }
-    });
-  },
-  updated() {
-    if (this.scroll) {
-      this.scroll.refresh(); // Refresh BetterScroll on update
-    }
+    })
+
+    return { wrapper }
   }
 }
 </script>
