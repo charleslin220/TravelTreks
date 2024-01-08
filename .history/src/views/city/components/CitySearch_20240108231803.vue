@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <input v-model="keyword" class="search-input" type="text" placeholder="Enter city name" />
+    <input class="search-input" type="text" placeholder="Enter city name" />
   </div>
   <div class="search-content" ref="search" v-show="keyword">
     <ul>
@@ -14,13 +14,6 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-import BScroll from '@better-scroll/core'
-
-interface CityItem {
-  id: string
-  name: string
-  spell: string
-}
 export default {
   name: 'CitySearch',
   props: {
@@ -29,7 +22,7 @@ export default {
   data() {
     return {
       keyword: '',
-      list: [] as CityItem[], // Explicitly type the list as an array of CityItem
+      list: [],
       timer: null
     }
   },
@@ -41,7 +34,6 @@ export default {
   watch: {
     keyword() {
       if (this.timer) {
-        this.timer = null
         clearTimeout(this.timer)
       }
       if (!this.keyword) {
@@ -49,6 +41,7 @@ export default {
         return
       }
       this.timer = setTimeout(() => {
+        // const result = []
         const result: string[] = []
         for (let i in this.cities) {
           this.cities[i].forEach((value) => {
@@ -59,21 +52,6 @@ export default {
         }
         this.list = result
       }, 100)
-    }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      if (this.$refs.search) {
-        this.scroll = new BScroll(this.$refs.search, {
-          probeType: 3,
-          click: true
-        })
-      }
-    })
-  },
-  updated() {
-    if (this.scroll) {
-      this.scroll.refresh() // Refresh BetterScroll on update
     }
   }
 }
@@ -94,18 +72,18 @@ export default {
     text-align: center
     border-radius: .06rem
     color: #666
-.search-content
-  z-index: 1
-  overflow: hidden
-  position: absolute
-  top: 1.58rem
-  left: 0
-  right: 0
-  bottom: 0
-  background: #eee
-  .search-item
-    line-height: .62rem
-    padding-left: .2rem
-    background: #fff
-    color: #666
+ .search-content
+    z-index: 1
+    overflow: hidden
+    position: absolute
+    top: 1.58rem
+    left: 0
+    right: 0
+    bottom: 0
+    background: #eee
+    .search-item
+      line-height: .62rem
+      padding-left: .2rem
+      background: #fff
+      color: #666
 </style>

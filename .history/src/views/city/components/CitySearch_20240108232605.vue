@@ -14,7 +14,6 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-import BScroll from '@better-scroll/core'
 
 interface CityItem {
   id: string
@@ -59,21 +58,6 @@ export default {
         }
         this.list = result
       }, 100)
-    }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      if (this.$refs.search) {
-        this.scroll = new BScroll(this.$refs.search, {
-          probeType: 3,
-          click: true
-        })
-      }
-    })
-  },
-  updated() {
-    if (this.scroll) {
-      this.scroll.refresh() // Refresh BetterScroll on update
     }
   }
 }

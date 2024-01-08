@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <input v-model="keyword" class="search-input" type="text" placeholder="Enter city name" />
+    <input class="search-input" type="text" placeholder="Enter city name" />
   </div>
   <div class="search-content" ref="search" v-show="keyword">
     <ul>
@@ -14,7 +14,6 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-import BScroll from '@better-scroll/core'
 
 interface CityItem {
   id: string
@@ -41,7 +40,6 @@ export default {
   watch: {
     keyword() {
       if (this.timer) {
-        this.timer = null
         clearTimeout(this.timer)
       }
       if (!this.keyword) {
@@ -49,6 +47,7 @@ export default {
         return
       }
       this.timer = setTimeout(() => {
+        // const result = []
         const result: string[] = []
         for (let i in this.cities) {
           this.cities[i].forEach((value) => {
@@ -59,21 +58,6 @@ export default {
         }
         this.list = result
       }, 100)
-    }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      if (this.$refs.search) {
-        this.scroll = new BScroll(this.$refs.search, {
-          probeType: 3,
-          click: true
-        })
-      }
-    })
-  },
-  updated() {
-    if (this.scroll) {
-      this.scroll.refresh() // Refresh BetterScroll on update
     }
   }
 }
