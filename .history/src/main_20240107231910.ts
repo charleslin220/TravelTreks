@@ -6,13 +6,13 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import fastclick from 'fastclick'
-import SwiperClass, { Pagination } from 'swiper'
+import SwiperClass from 'swiper'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css'
 
 const app = createApp(App)
 fastclick.FastClick.attach(document.body)
-SwiperClass.use([Pagination])
+SwiperClass.use([/* swiper modules... */])
 app.use(VueAwesomeSwiper)
 
 

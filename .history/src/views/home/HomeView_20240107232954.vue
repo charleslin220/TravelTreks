@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HomeHeader from './components/HomeHeader.vue'
-import HomeSwiper from './components/HomeSwiper.vue'
+import HomeSwiper from './components/HomeHeader.vue'
 </script>
 
 <template>
