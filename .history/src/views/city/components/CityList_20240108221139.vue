@@ -31,6 +31,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
+// import { ref, onMounted } from 'vue'
 import BScroll from '@better-scroll/core'
 
 interface cityItem {
@@ -56,10 +57,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       if (this.$refs.wrapper) {
-        this.scroll = new BScroll(this.$refs.wrapper, {
-          probeType: 3,
-          click: true
-        })
+        this.scroll = new BScroll(this.$refs.wrapper) // Correctly access the ref and initialize BetterScroll
       }
     })
   },
@@ -71,8 +69,8 @@ export default {
   watch: {
     letter() {
       if (this.letter) {
-        const element = this.$refs[this.letter][0]
-        this.scroll.scrollToElement(element)
+        const element = this.$ref[this.letter]
+        // this.scroll.scrollToElement(element)
       }
     }
   }

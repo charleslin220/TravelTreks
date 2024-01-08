@@ -7,8 +7,8 @@
       :ref="item"
       @touchstart="handleTouchStart"
       @touchmove="handleTouchMove"
-      @touchend="handleTouchEnd"
-      @click="handleLetterClick"
+      @touchend="handleTouchStart"
+      @click="handleTouchEnd"
     >
       {{ item }}
     </li>
@@ -16,19 +16,16 @@
 </template>
 
 <script lang="ts">
-import type { PropType } from 'vue'
 export default {
   name: 'CityAlphabet',
   props: {
-    cities: Object as PropType<{ [key: string]: any }>
+    cities: Object
   },
   computed: {
-    letters(): string[] {
-      const letters: string[] = []
-      for (const i in this.cities) {
-        if (Object.prototype.hasOwnProperty.call(this.cities, i)) {
-          letters.push(i)
-        }
+    letters() {
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
       }
       return letters
     }
@@ -37,13 +34,11 @@ export default {
     return {
       touchStatus: false,
       startY: 0,
-      timer: null
+      timmer: null
     }
   },
   updated() {
-    if (this.$refs['A'] && this.$refs['A'][0]) {
-      this.startY = this.$refs['A'][0].offsetTop
-    }
+    this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
     handleLetterClick(e) {
@@ -55,11 +50,9 @@ export default {
     handleTouchMove(e) {
       if (this.touchStatus) {
         if (this.timer) {
-          this.timer = null
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
-          console.log(this.timer, 'this.timer')
           const touchY = e.touches[0].clientY - this.startY
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index < this.letters.length) {

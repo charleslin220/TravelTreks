@@ -16,19 +16,17 @@
 </template>
 
 <script lang="ts">
-import type { PropType } from 'vue'
+import type { PropType } from 'vue';
 export default {
   name: 'CityAlphabet',
   props: {
     cities: Object as PropType<{ [key: string]: any }>
   },
   computed: {
-    letters(): string[] {
-      const letters: string[] = []
-      for (const i in this.cities) {
-        if (Object.prototype.hasOwnProperty.call(this.cities, i)) {
-          letters.push(i)
-        }
+    letters() {
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
       }
       return letters
     }
@@ -55,7 +53,7 @@ export default {
     handleTouchMove(e) {
       if (this.touchStatus) {
         if (this.timer) {
-          this.timer = null
+          // this.timer = null
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {

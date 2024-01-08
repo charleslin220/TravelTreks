@@ -7,8 +7,8 @@
       :ref="item"
       @touchstart="handleTouchStart"
       @touchmove="handleTouchMove"
-      @touchend="handleTouchEnd"
-      @click="handleLetterClick"
+      @touchend="handleTouchStart"
+      @click="handleTouchEnd"
     >
       {{ item }}
     </li>
@@ -16,19 +16,16 @@
 </template>
 
 <script lang="ts">
-import type { PropType } from 'vue'
 export default {
   name: 'CityAlphabet',
   props: {
-    cities: Object as PropType<{ [key: string]: any }>
+    cities: Object
   },
   computed: {
-    letters(): string[] {
-      const letters: string[] = []
-      for (const i in this.cities) {
-        if (Object.prototype.hasOwnProperty.call(this.cities, i)) {
-          letters.push(i)
-        }
+    letters() {
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
       }
       return letters
     }
@@ -55,7 +52,6 @@ export default {
     handleTouchMove(e) {
       if (this.touchStatus) {
         if (this.timer) {
-          this.timer = null
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
@@ -70,6 +66,7 @@ export default {
     },
     handleTouchEnd() {
       this.touchStatus = false
+      this.timer = null
     }
   }
 }

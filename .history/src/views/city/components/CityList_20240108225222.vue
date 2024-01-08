@@ -59,7 +59,7 @@ export default {
         this.scroll = new BScroll(this.$refs.wrapper, {
           probeType: 3,
           click: true
-        })
+        }) // Correctly access the ref and initialize BetterScroll
       }
     })
   },

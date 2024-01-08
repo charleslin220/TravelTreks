@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
+      <div class="area" v-for="(item, key) of cities" :key="key">
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
           <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id">
@@ -31,6 +31,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
+// import { ref, onMounted } from 'vue'
 import BScroll from '@better-scroll/core'
 
 interface cityItem {
@@ -51,29 +52,18 @@ export default {
   data() {
     return {
       scroll: null // Define scroll here
-    }
+    };
   },
   mounted() {
     this.$nextTick(() => {
       if (this.$refs.wrapper) {
-        this.scroll = new BScroll(this.$refs.wrapper, {
-          probeType: 3,
-          click: true
-        })
+        this.scroll = new BScroll(this.$refs.wrapper); // Correctly access the ref and initialize BetterScroll
       }
-    })
+    });
   },
   updated() {
     if (this.scroll) {
-      this.scroll.refresh() // Refresh BetterScroll on update
-    }
-  },
-  watch: {
-    letter() {
-      if (this.letter) {
-        const element = this.$refs[this.letter][0]
-        this.scroll.scrollToElement(element)
-      }
+      this.scroll.refresh(); // Refresh BetterScroll on update
     }
   }
 }

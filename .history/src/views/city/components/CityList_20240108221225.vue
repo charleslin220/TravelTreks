@@ -56,10 +56,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       if (this.$refs.wrapper) {
-        this.scroll = new BScroll(this.$refs.wrapper, {
-          probeType: 3,
-          click: true
-        })
+        this.scroll = new BScroll(this.$refs.wrapper) // Correctly access the ref and initialize BetterScroll
       }
     })
   },
