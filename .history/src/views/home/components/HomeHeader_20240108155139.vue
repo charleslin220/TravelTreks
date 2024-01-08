@@ -18,14 +18,13 @@
 export default {
   name: 'HomeHeader',
   props: {
-    city: String
+    city: string
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '../../../assets/styles/varibles.styl';
-@import '../../../assets/styles/mixins.styl'
 .header
   display: flex
   line-height: .86rem
@@ -48,10 +47,9 @@ export default {
     border-radius: .1rem
     color: #ccc
   .header-right
-    width: 1.8rem
+    width: 1.24rem
     float:right
     text-align: center
-    ellipsis()
     .arrow-icon
       margin-left: -.04rem
       font-size: .24rem

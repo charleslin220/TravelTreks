@@ -1,0 +1,134 @@
+{
+    "ret": true,
+    "data": {
+        "city": "Glasgow",
+        "swiperList": [
+            {
+                "id": "0001",
+                "imgUrl": "https://thumbor.forbes.com/thumbor/fit-in/1290x/https://www.forbes.com/advisor/wp-content/uploads/2021/03/traveling-based-on-fare-deals.jpg",
+                "desc": "image1"
+            },
+            {
+                "id": "0002",
+                "imgUrl": "https://scontent.fgla3-1.fna.fbcdn.net/v/t39.30808-6/322190635_1345969802867685_3060862018728825820_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=173fa1&_nc_ohc=9Kj33R4fa5EAX8C-y5g&_nc_ht=scontent.fgla3-1.fna&oh=00_AfDCUT3FRp_VpPnf7WNl9SXfs--QFC9cEYGDAJvzlL8wfA&oe=659F6875",
+                "desc": "image2"
+            },
+            {
+                "id": "0003",
+                "imgUrl": "http://www.standrewspaisley.com/uploads/6/0/2/3/60230905/travel-tourism_orig.jpg",
+                "desc": "image3"
+            }
+        ],
+        "iconList": [
+            {
+                "id": "0001",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+                "desc": "Scenic Spot Tickets"
+            },
+            {
+                "id": "0002",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png",
+                "desc": "Ski Season"
+            },
+            {
+                "id": "0003",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+                "desc": "Hot Springs"
+            },
+            {
+                "id": "0004",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+                "desc": "Botanical Garden"
+            },
+            {
+                "id": "0005",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+                "desc": "Amusement Park"
+            },
+            {
+                "id": "0006",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+                "desc": "Must-Visit List"
+            },
+            {
+                "id": "0007",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png",
+                "desc": "Performances"
+            },
+            {
+                "id": "0008",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
+                "desc": "City Sightseeing"
+            },
+            {
+                "id": "0009",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+                "desc": "Day Trips"
+            }
+        ],
+        "recommendList": [
+            {
+                "id": "0001",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
+                "title": "The Forbidden City",
+                "desc": "A representative of Oriental palace architecture, a model of world palace architecture"
+            },
+            {
+                "id": "0002",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1511/d2/d2aec2dfc5aa771290.water.jpg_140x140_abb362a7.jpg",
+                "title": "Nanshan Ski Resort",
+                "desc": "Professional skiing destination in Beijing"
+            },
+            {
+                "id": "0003",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1501/f4/f467729126949c3a.water.jpg_140x140_ef235b1c.jpg",
+                "title": "Tiananmen Square",
+                "desc": "I love Beijing Tiananmen, the sun rises above Tiananmen"
+            },
+            {
+                "id": "0004",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_140x140_1c863e5c.jpg",
+                "title": "The Water Cube",
+                "desc": "China's pride, a glittering droplet in the sun"
+            },
+            {
+                "id": "0005",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/201308/23/b283071686e64dfec8d65eac.jpg_140x140_8c5a7c49.jpg",
+                "title": "Wendu Water City Health Hall",
+                "desc": "Surrounded by various subtropical plants, it feels like being in a tropical rainforest"
+            }
+        ],
+        "weekendList": [
+            {
+                "id": "0001",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg",
+                "title": "Beijing Hot Springs Ranking",
+                "desc": "Counting Beijing's hot springs to warm your winter"
+            },
+            {
+                "id": "0002",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg",
+                "title": "Beijing's Top 10 Must-Visit",
+                "desc": "The must-visit attractions in Beijing are none other than these places"
+            },
+            {
+                "id": "0003",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
+                "title": "Exploring Beijing's Imperial Aura",
+                "desc": "Centuries-old royal temples and palaces still stand majestic and imposing"
+            },
+            {
+                "id": "0004",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+                "title": "Students' Favorite Museum",
+                "desc": "What to do this weekend? Many museums in Beijing are now open for free"
+            },
+            {
+                "id": "0005",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg",
+                "title": "Children's Theater, a Paradise for Kids",
+                "desc": "Take your little ones to a performance, experience the endless charm of art up close"
+            }
+        ]
+    }
+}

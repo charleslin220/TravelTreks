@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-interface RecommendItem {
+interface IconsItem {
   id: string
   imgUrl: string
   desc: string,
@@ -25,7 +25,7 @@ interface RecommendItem {
 export default {
   name: 'HomeRecommend',
   props: {
-    list: Array as PropType<RecommendItem[]>,
+    list: Array as PropType<IconsItem[]>,
     default: () => [] // Provide a default empty array
   },
   data() {

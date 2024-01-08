@@ -24,8 +24,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../../../assets/styles/varibles.styl';
-@import '../../../assets/styles/mixins.styl'
+@import '~styles/varibles.styl';
+@import '~styles/mixins.styl'
 .header
   display: flex
   line-height: .86rem

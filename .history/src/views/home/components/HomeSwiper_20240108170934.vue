@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-import { Autoplay, Pagination } from 'swiper'
+import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -51,7 +51,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Autoplay, Pagination]
+      modules: [Pagination]
     }
   }
 }

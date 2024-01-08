@@ -5,10 +5,6 @@
       :modules="modules"
       :pagination="{ clickable: true }"
       :loop="true"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false
-      }"
       v-if="showSwiper"
     >
       <swiper-slide class="slide" v-for="item of list" :key="item.id">
@@ -20,7 +16,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-import { Autoplay, Pagination } from 'swiper'
+import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -40,10 +36,10 @@ export default {
   data() {
     return {}
   },
-  computed: {
-    showSwiper() {
-      return this.list && this.list.length
-    }
+  computed:{
+      showSwiper(){
+        return this.list && this.list.length
+      }
   },
   components: {
     Swiper,
@@ -51,7 +47,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Autoplay, Pagination]
+      modules: [Pagination]
     }
   }
 }

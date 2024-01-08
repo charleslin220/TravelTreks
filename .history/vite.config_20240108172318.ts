@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url'
+// import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import path from 'path';
@@ -13,8 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '~styles': path.resolve(__dirname, './src/assets/styles') ///not working
+      // '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '~styles': path.resolve(__dirname, 'src/assets/styles/')
     }
   },
   server: {

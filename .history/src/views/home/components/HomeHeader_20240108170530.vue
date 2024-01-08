@@ -18,8 +18,16 @@
 export default {
   name: 'HomeHeader',
   props: {
-    city: String
+    city: String,
   }
+  // props: {
+  //   city: {
+  //     type: String, // Use `String` as the value, not `string`
+  //     required: true // Or `false` depending on whether it's required or not
+  //     // You can also provide a default value if it's not required
+  //     // default: ''
+  //   }
+  // }
 }
 </script>
 

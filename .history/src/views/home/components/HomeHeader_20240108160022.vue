@@ -18,14 +18,18 @@
 export default {
   name: 'HomeHeader',
   props: {
-    city: String
+    city: {
+      type: String, // Use `String` as the value, not `string`
+      required: true // Or `false` depending on whether it's required or not
+      // You can also provide a default value if it's not required
+      // default: ''
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '../../../assets/styles/varibles.styl';
-@import '../../../assets/styles/mixins.styl'
 .header
   display: flex
   line-height: .86rem
@@ -48,7 +52,7 @@ export default {
     border-radius: .1rem
     color: #ccc
   .header-right
-    width: 1.8rem
+    width: 1.7rem
     float:right
     text-align: center
     ellipsis()

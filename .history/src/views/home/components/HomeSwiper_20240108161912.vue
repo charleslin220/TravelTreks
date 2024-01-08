@@ -1,16 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper
-      class="swiper"
-      :modules="modules"
-      :pagination="{ clickable: true }"
-      :loop="true"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false
-      }"
-      v-if="showSwiper"
-    >
+    <swiper class="swiper" :modules="modules" :pagination="{ clickable: true }" :loop="true">
       <swiper-slide class="slide" v-for="item of list" :key="item.id">
         <img :src="item.imgUrl" :alt="item.desc" class="swiper-img" />
       </swiper-slide>
@@ -20,7 +10,7 @@
 
 <script lang="ts">
 import type { PropType } from 'vue'
-import { Autoplay, Pagination } from 'swiper'
+import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -34,16 +24,10 @@ interface SwiperItem {
 export default {
   name: 'HomeSwiper',
   props: {
-    list: Array as PropType<SwiperItem[]>,
-    default: () => [] // Provide a default empty array
+    list: Array as PropType<SwiperItem[]>
   },
   data() {
     return {}
-  },
-  computed: {
-    showSwiper() {
-      return this.list && this.list.length
-    }
   },
   components: {
     Swiper,
@@ -51,7 +35,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Autoplay, Pagination]
+      modules: [Pagination]
     }
   }
 }
