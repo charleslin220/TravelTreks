@@ -41,21 +41,18 @@ export default {
     }
   },
   updated() {
-    const aRef = this.$refs['A'] as HTMLElement[]; // Type assertion
-    if (aRef && aRef[0]) {
-      this.startY = aRef[0].offsetTop;
+    if (this.$refs['A'] && this.$refs['A'][0]) {
+      this.startY = this.$refs['A'][0].offsetTop
     }
   },
   methods: {
-    handleLetterClick(e: MouseEvent) {
-      // this.$emit('change', e.target.innerText)
-      const target = e.target as HTMLElement; // Type assertion for the event target
-      this.$emit('change', target.innerText);
+    handleLetterClick(e) {
+      this.$emit('change', e.target.innerText)
     },
     handleTouchStart() {
       this.touchStatus = true
     },
-    handleTouchMove(e: TouchEvent) {
+    handleTouchMove(e) {
       if (this.touchStatus) {
         if (this.timer !== null) {
         clearTimeout(this.timer);

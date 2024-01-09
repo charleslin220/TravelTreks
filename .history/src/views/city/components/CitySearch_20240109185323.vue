@@ -4,7 +4,7 @@
   </div>
   <div class="search-content" ref="search" v-show="keyword">
     <ul>
-      <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">
+      <li class="search-item border-bottom" v-for="item of list" :key="item.id">
         {{ item.name }}
       </li>
       <li class="search-item border-bottom" v-show="hasNoData">No matched data</li>
@@ -31,9 +31,8 @@ export default {
     return {
       keyword: '',
       list: [] as CityItem[], // Explicitly type the list as an array of CityItem
-      timer: null as number | null, // Type timer as number or null
-      store: useStore(),
-      scroll: null as BScroll | null, // Type scroll as BScroll or null
+      timer: null,
+      store: useStore()
     }
   },
   computed: {
@@ -43,39 +42,37 @@ export default {
   },
   watch: {
     keyword() {
-      if (this.timer !== null) {
-        clearTimeout(this.timer);
-        this.timer = null;
+      if (this.timer) {
+        this.timer = null
+        clearTimeout(this.timer)
       }
       if (!this.keyword) {
-        this.list = [];
-        return;
+        this.list = []
+        return
       }
       this.timer = setTimeout(() => {
-        const result: CityItem[] = []; // Type result as an array of CityItem
+        const result: string[] = []
         for (let i in this.cities) {
-          this.cities[i].forEach((value: CityItem) => { // Explicitly type value
+          this.cities[i].forEach((value) => {
             if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
-              result.push(value);
+              result.push(value)
             }
-          });
+          })
         }
-        this.list = result;
-      }, 100);
+        this.list = result
+      }, 100)
     }
   },
   methods: {
     handleCityClick(city: string) {
       // this.$store.dispatch('changeCity', city)
       this.store.commit('changeCity', city)
-      this.$router.push('/')
     }
   },
   mounted() {
     this.$nextTick(() => {
-      const search = this.$refs.search as HTMLElement
-      if (search) {
-        this.scroll = new BScroll(search, {
+      if (this.$refs.search) {
+        this.scroll = new BScroll(this.$refs.search, {
           probeType: 3,
           click: true
         })

@@ -3,7 +3,6 @@ import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
 
 import { createApp } from 'vue'
-import store from './store'
 import App from './App.vue'
 import router from './router'
 import fastclick from 'fastclick'
@@ -18,6 +17,5 @@ app.use(VueAwesomeSwiper)
 
 
 app.use(router)
-app.use(store)
 
 app.mount('#app')

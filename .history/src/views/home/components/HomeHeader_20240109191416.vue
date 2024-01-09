@@ -18,12 +18,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useStore, mapState, mapGetters } from 'vuex'
+import { useStore, mapState } from 'vuex'
 export default defineComponent({
   name: 'HomeHeader',
   computed: {
-    ...mapState(['city']),
-    ...mapGetters(['doubleCity'])
+    ...mapState(['city'])
   },
   setup() {
     const store = useStore()

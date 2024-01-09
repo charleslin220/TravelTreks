@@ -43,6 +43,14 @@ export default {
   },
   watch: {
     keyword() {
+      // if (this.timer) {
+      //   this.timer = null
+      //   clearTimeout(this.timer)
+      // }
+      // if (!this.keyword) {
+      //   this.list = []
+      //   return
+      // }
       if (this.timer !== null) {
         clearTimeout(this.timer);
         this.timer = null;
@@ -68,7 +76,6 @@ export default {
     handleCityClick(city: string) {
       // this.$store.dispatch('changeCity', city)
       this.store.commit('changeCity', city)
-      this.$router.push('/')
     }
   },
   mounted() {

@@ -23,7 +23,7 @@ export default defineComponent({
   name: 'HomeHeader',
   computed: {
     ...mapState(['city']),
-    ...mapGetters(['doubleCity'])
+    ...mapGetters('doubleCity')
   },
   setup() {
     const store = useStore()

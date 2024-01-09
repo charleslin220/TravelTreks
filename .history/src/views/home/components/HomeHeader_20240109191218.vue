@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{ city }}
+        {{ store.state.city }}
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
     </router-link>
@@ -17,20 +17,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useStore, mapState, mapGetters } from 'vuex'
-export default defineComponent({
+import { defineComponent } from 'vue';
+import { useStore } from 'vuex'
+export default defineComponent ({
   name: 'HomeHeader',
-  computed: {
-    ...mapState(['city']),
-    ...mapGetters(['doubleCity'])
-  },
-  setup() {
+  setup(){
     const store = useStore()
     return {
       store
     }
   }
+
 })
 </script>
 

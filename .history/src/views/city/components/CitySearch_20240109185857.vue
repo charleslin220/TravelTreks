@@ -43,32 +43,31 @@ export default {
   },
   watch: {
     keyword() {
-      if (this.timer !== null) {
-        clearTimeout(this.timer);
-        this.timer = null;
+      if (this.timer) {
+        this.timer = null
+        clearTimeout(this.timer)
       }
       if (!this.keyword) {
-        this.list = [];
-        return;
+        this.list = []
+        return
       }
       this.timer = setTimeout(() => {
-        const result: CityItem[] = []; // Type result as an array of CityItem
+        const result: string[] = []
         for (let i in this.cities) {
-          this.cities[i].forEach((value: CityItem) => { // Explicitly type value
+          this.cities[i].forEach((value) => {
             if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
-              result.push(value);
+              result.push(value)
             }
-          });
+          })
         }
-        this.list = result;
-      }, 100);
+        this.list = result
+      }, 100)
     }
   },
   methods: {
     handleCityClick(city: string) {
       // this.$store.dispatch('changeCity', city)
       this.store.commit('changeCity', city)
-      this.$router.push('/')
     }
   },
   mounted() {

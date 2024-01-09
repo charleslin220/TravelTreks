@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{ city }}
+        {{ doubleCity }}
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
     </router-link>
@@ -23,7 +23,7 @@ export default defineComponent({
   name: 'HomeHeader',
   computed: {
     ...mapState(['city']),
-    ...mapGetters(['doubleCity'])
+    ...mapGetters('doubleCity')
   },
   setup() {
     const store = useStore()

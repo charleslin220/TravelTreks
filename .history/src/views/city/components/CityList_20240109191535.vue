@@ -5,7 +5,7 @@
         <div class="title border-topbottom">Selected City</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">{{ currentCity }}</div>
+            <div class="button">{{ city }}</div>
           </div>
         </div>
       </div>
@@ -67,9 +67,7 @@ export default {
     }
   },
   computed: {
-    ...mapState({
-      currentCity: 'city'
-    })
+    ...mapState(['city'])
   },
   methods: {
     handleCityClick(city: string) {

@@ -5,19 +5,14 @@
         <div class="title border-topbottom">Selected City</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">{{ currentCity }}</div>
+            <div class="button">{{ store.state.city }}</div>
           </div>
         </div>
       </div>
       <div class="area">
         <div class="title border-topbottom">Popular Cities</div>
         <div class="button-list">
-          <div
-            class="button-wrapper"
-            v-for="item of hotCities"
-            :key="item.id"
-            @click="handleCityClick(item.name)"
-          >
+          <div class="button-wrapper" v-for="item of hotCities" :key="item.id">
             <div class="button">{{ item.name }}</div>
           </div>
         </div>
@@ -25,12 +20,7 @@
       <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
-          <div
-            class="item border-bottom"
-            v-for="innerItem of item"
-            :key="innerItem.id"
-            @click="handleCityClick(innerItem.name)"
-          >
+          <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id">
             {{ innerItem.name }}
           </div>
         </div>
@@ -40,8 +30,9 @@
 </template>
 
 <script lang="ts">
+import { useStore } from 'vuex'
+import { defineComponent, ref, onMounted, watch } from 'vue'
 import BScroll from '@better-scroll/core'
-import { useStore, mapState } from 'vuex'
 import type { PropType } from 'vue'
 
 interface CityItem {
@@ -50,61 +41,85 @@ interface CityItem {
   name: string
 }
 
-export default {
+export default defineComponent({
   name: 'CityList',
   props: {
     hotCities: {
       type: Array as PropType<CityItem[]>,
-      default: () => [] // Correct way to provide a default value
+      default: () => []
     },
     cities: Object,
     letter: String
   },
-  data() {
-    return {
-      scroll: null as BScroll | null, // Type scroll as BScroll or null
-      store: useStore()
-    }
-  },
-  computed: {
-    ...mapState({
-      currentCity: 'city'
-    })
-  },
-  methods: {
-    handleCityClick(city: string) {
-      // this.$store.dispatch('changeCity', city)
-      this.store.commit('changeCity', city)
-      this.$router.push('/')
-    }
-  },
-  updated() {
-    if (this.scroll) {
-      this.scroll.refresh() // Refresh BetterScroll on update
-    }
-  },
-  watch: {
-    letter(newVal) {
-      if (newVal && this.scroll) {
-        const element = this.$refs[newVal] as HTMLElement[] // Type assertion for element
-        if (element && element[0]) {
-          this.scroll.scrollToElement(element[0], 0, 0, 0, undefined)
-        }
-      }
-    }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      const wrapper = this.$refs.wrapper as HTMLElement // Type assertion for wrapper
-      if (wrapper) {
-        this.scroll = new BScroll(wrapper, {
+  setup(props, { refs }) {
+    const scroll = ref(null)
+    const store = useStore()
+
+    onMounted(() => {
+      if (refs.wrapper) {
+        scroll.value = new BScroll(refs.wrapper, {
           probeType: 3,
           click: true
         })
       }
     })
+
+    watch(
+      () => props.letter,
+      (newLetter) => {
+        if (newLetter && scroll.value) {
+          const element = refs[newLetter][0]
+          scroll.value.scrollToElement(element)
+        }
+      }
+    )
+
+    return {
+      scroll,
+      store
+    }
   }
-}
+})
+
+// export default {
+//   name: 'CityList',
+//   props: {
+//     hotCities: {
+//       type: Array as PropType<cityItem[]>,
+//       default: () => [] // Correct way to provide a default value
+//     },
+//     cities: Object,
+//     letter: String
+//   },
+//   data() {
+//     return {
+//       scroll: null // Define scroll here
+//     }
+//   },
+//   mounted() {
+//     this.$nextTick(() => {
+//       if (this.$refs.wrapper) {
+//         this.scroll = new BScroll(this.$refs.wrapper, {
+//           probeType: 3,
+//           click: true
+//         })
+//       }
+//     })
+//   },
+//   updated() {
+//     if (this.scroll) {
+//       this.scroll.refresh() // Refresh BetterScroll on update
+//     }
+//   },
+//   watch: {
+//     letter() {
+//       if (this.letter) {
+//         const element = this.$refs[this.letter][0]
+//         this.scroll.scrollToElement(element)
+//       }
+//     }
+//   }
+// }
 </script>
 
 <style lang="stylus" scoped>

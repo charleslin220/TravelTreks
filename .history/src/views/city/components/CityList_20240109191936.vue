@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import BScroll from '@better-scroll/core'
-import { useStore, mapState } from 'vuex'
+import { useStore, mapState, mapMutations } from 'vuex'
 import type { PropType } from 'vue'
 
 interface CityItem {
@@ -74,9 +74,11 @@ export default {
   methods: {
     handleCityClick(city: string) {
       // this.$store.dispatch('changeCity', city)
-      this.store.commit('changeCity', city)
+      // this.store.commit('changeCity', city)
+      this.changeCity(city)
       this.$router.push('/')
-    }
+    },
+    ...mapMutations(['changeCity'])
   },
   updated() {
     if (this.scroll) {
