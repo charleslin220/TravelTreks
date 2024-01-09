@@ -28,7 +28,6 @@ export default {
   },
   data() {
     return {
-      lastCity: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
@@ -36,15 +35,12 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city']),
-    isCitySame() {
-      return this.lastCity === this.city
-    }
+    ...mapState(['city'])
   },
   methods: {
     async getHomeInfo() {
       try {
-        const response = await axios.get('/api/index.json?city=' + this.city)
+        const response = await axios.get('/api/index.json?city=')
         this.getHomeInfoSucc(response)
       } catch (error) {
         console.error(error)
@@ -62,18 +58,7 @@ export default {
     }
   },
   mounted() {
-    // this.lastCity = this.city
-    // this.getHomeInfo()
-    if ((this.city as string) !== this.lastCity) {
-      this.getHomeInfo()
-      this.lastCity = this.city as string
-    }
+    this.getHomeInfo()
   }
-  // activated() {
-  //   if(!this.isCitySame) {
-  //     this.lastCity = this.city
-  //     this.getHomeInfo()
-  //   }
-  // }
 }
 </script>

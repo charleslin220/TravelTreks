@@ -36,10 +36,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city']),
-    isCitySame() {
-      return this.lastCity === this.city
-    }
+    ...mapState(['city'])
   },
   methods: {
     async getHomeInfo() {
@@ -62,18 +59,11 @@ export default {
     }
   },
   mounted() {
-    // this.lastCity = this.city
-    // this.getHomeInfo()
-    if ((this.city as string) !== this.lastCity) {
-      this.getHomeInfo()
-      this.lastCity = this.city as string
-    }
+    this.lastCity = this.city
+    this.getHomeInfo()
+  },
+  activated() {
+
   }
-  // activated() {
-  //   if(!this.isCitySame) {
-  //     this.lastCity = this.city
-  //     this.getHomeInfo()
-  //   }
-  // }
 }
 </script>
