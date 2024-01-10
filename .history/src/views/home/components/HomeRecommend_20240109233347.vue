@@ -2,26 +2,16 @@
   <div>
     <div class="title">Best Selling Recommendations</div>
     <ul>
-      <!-- <router-link to="/detail">
-        <li class="item border-bottom" v-for="item of list" :key="item.id">
-          <img class="item-img" :src="item.imgUrl" />
-          <div class="item-info">
-            <p class="item-title">{{ item.title }}</p>
-            <p class="item-desc">{{ item.desc }}</p>
-            <button class="item-button">view full</button>
-          </div>
-        </li>
-      </router-link> -->
-      <router-link v-for="item in list" :key="item.id" :to="'/detail/' + item.id" custom v-slot="{ navigate }">
-        <li class="item border-bottom" @click="navigate">
-          <img class="item-img" :src="item.imgUrl" />
-          <div class="item-info">
-            <p class="item-title">{{ item.title }}</p>
-            <p class="item-desc">{{ item.desc }}</p>
-            <button class="item-button">view full</button>
-          </div>
-        </li>
-      </router-link>
+      <router-link to="/detail">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <img class="item-img" :src="item.imgUrl" />
+        <div class="item-info">
+          <p class="item-title">{{ item.title }}</p>
+          <p class="item-desc">{{ item.desc }}</p>
+          <button class="item-button">view full</button>
+        </div>
+      </li>
+    </router-link>
     </ul>
   </div>
 </template>
@@ -31,7 +21,7 @@ import type { PropType } from 'vue'
 interface RecommendItem {
   id: string
   imgUrl: string
-  desc: string
+  desc: string,
   title: string
 }
 export default {

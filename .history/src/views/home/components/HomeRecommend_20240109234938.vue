@@ -12,7 +12,7 @@
           </div>
         </li>
       </router-link> -->
-      <router-link v-for="item in list" :key="item.id" :to="'/detail/' + item.id" custom v-slot="{ navigate }">
+      <router-link v-for="item in list" :key="item.id" :to="'/detail' + item.id" custom v-slot="{ navigate }">
         <li class="item border-bottom" @click="navigate">
           <img class="item-img" :src="item.imgUrl" />
           <div class="item-info">
